@@ -67,5 +67,8 @@ jobs:
   information:
     runs-on: ubuntu-latest
     steps:
+      #muszáj lekérni, mert ebben vam maga a custom action is!!
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Run custom action
         uses: ./.github/actions/deploy-s3-javascript
